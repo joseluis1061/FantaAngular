@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Product Sans;
+  src: url('./fonts/Product\ Sans\ Regular.ttf');
+}
+@font-face {
+  font-family: Product Sans Bold;
+  src: url('./fonts/Product\ Sans\ Bold.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Product Sans;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+body{
+  overflow-x: hidden;
+}

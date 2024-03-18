@@ -2,20 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { WebsideRoutingModule } from './webside-routing.module';
-import { SectionOneComponent } from './section-one/section-one.component';
-import { SectionTwoComponent } from './section-two/section-two.component';
-import { SectionThreeComponent } from './section-three/section-three.component';
-
+import { SectionOneComponent } from './page/section-one/section-one.component';
+import { SectionTwoComponent } from './page/section-two/section-two.component';
+import { SectionThreeComponent } from './page/section-three/section-three.component';
+import { LayoutComponent } from './page/layout/layout.component';
+import { HeaderComponent } from '../shared/header/header.component';
 
 @NgModule({
   declarations: [
     SectionOneComponent,
     SectionTwoComponent,
-    SectionThreeComponent
+    SectionThreeComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
-    WebsideRoutingModule
+    WebsideRoutingModule,
+    HeaderComponent
   ]
 })
 export class WebsideModule { }
