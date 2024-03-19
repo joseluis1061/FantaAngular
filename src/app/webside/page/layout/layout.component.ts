@@ -23,7 +23,7 @@ export class LayoutComponent implements OnInit{
         end: "50% 50%",
         scrub: true,
         toggleActions: "restart pause reverse pause",
-        markers: true
+        markers: false
       }
     })
 

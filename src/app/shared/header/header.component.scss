@@ -8,6 +8,14 @@
     height: 10vh;
     padding: 0vw 10vw;
     z-index: 99;
+
+    .logo{
+      width: 7vw;
+      height: 5vh;
+      img{
+        width: 100%;
+        object-fit: cover;      }
+    }
   }
   nav a, i{
     font-size: 1vw;
