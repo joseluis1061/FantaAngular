@@ -1,0 +1,111 @@
+.footer{
+  background-color: black;
+  width: 100%;
+  color: white;
+  &-container{
+    width: 80%;
+    margin: 0 auto;
+    .location{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      figure{
+        width: 12vw;
+        margin: 0;
+        padding: 0;
+        img{
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      button{
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        border: 1px solid white;
+        background-color: black;
+        border-radius: 25px 25px;
+        gap: 10px;
+      }
+    }
+    .information{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding: 2rem 0;
+      .resume{
+        width: 50%;
+        display: flex;
+
+        gap: 5rem;
+        .resume-left, .resume-center, .resume-right{
+          align-self: flex-start;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          h3{
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 1rem;
+          }
+          .d-opacity-cero{
+            opacity: 0;
+          }
+
+          a{
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      .social-media{
+        width: 50%;
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .social{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 1.5rem;
+          a{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50% 50%;
+            border: 1px solid white;
+            padding: 1rem 1rem;
+          }
+          a:hover{
+            background-color: #333333;
+          }
+          a i{
+            color: white;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .leyend{
+      text-align: right;
+      padding: 2rem 0;
+    }
+
+  }
+
+
+}

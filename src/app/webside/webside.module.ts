@@ -7,6 +7,7 @@ import { SectionTwoComponent } from './page/section-two/section-two.component';
 import { SectionThreeComponent } from './page/section-three/section-three.component';
 import { LayoutComponent } from './page/layout/layout.component';
 import { HeaderComponent } from '../shared/componets/header/header.component';
+import { FooterComponent } from '../shared/componets/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from '../shared/componets/header/header.component';
   imports: [
     CommonModule,
     WebsideRoutingModule,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class WebsideModule { }
