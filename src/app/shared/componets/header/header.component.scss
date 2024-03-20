@@ -12,6 +12,7 @@
     .logo{
       width: 7vw;
       height: 5vh;
+      cursor: pointer;
       img{
         width: 100%;
         object-fit: cover;
@@ -22,6 +23,7 @@
     font-size: 1.5vw;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
   }
   .cntr-nav{
     display: flex;

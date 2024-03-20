@@ -1,14 +1,13 @@
 <header class="header">
   <nav>
-    <a href="#" class="logo"><img src="../../../assets/image/coca-cola-logo.png" alt="Logo" loading="lazy"></a>
+    <a (click)="goto('one')" class="logo"><img src="../../../assets/image/coca-cola-logo.png" alt="Logo" loading="lazy"></a>
     <div class="cntr-nav">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Shop</a>
-      <a href="#">Contact</a>
+      <a (click)="goto('one')">Home</a>
+      <a (click)="goto('two')">Products</a>
+      <a (click)="goto('three')">Shop</a>
+      <a (click)="goto('our')">Contact</a>
     </div>
     <!-- <i class="ri-menu-fill"></i> -->
     <i><mat-icon>add_shopping_cart</mat-icon></i>
-
   </nav>
 </header>
