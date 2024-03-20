@@ -69,6 +69,7 @@ export class LayoutComponent implements OnInit{
         scrub: true,
         markers: false,
         toggleActions: "restart pause reverse pause",
+
       }
     })
 
@@ -76,50 +77,58 @@ export class LayoutComponent implements OnInit{
       top: "215%",
       left: "32%",
       width: "35%",
-      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)",
+      delay: 1
     }, 'orange2')
     tl2.to("#orange-cut",{
       top: "210%",
       left: "40%",
       width:"20%",
-      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)",
+      delay: 1
     }, 'orange2')
 
     tl2.to("#orange",{
       top: "250%",
       right: "30%",
       width: "15%",
-      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)",
+      delay: 1
     }, 'orange2')
     tl2.to("#leaf",{
       top: "225%",
       left: "0%",
       rotate: "160deg",
       zIndex: "10",
-      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)",
+      delay: 1
     }, 'orange2')
     tl2.to("#leaf2",{
       top: "230%",
       left: "90%",
       rotate: "160deg",
       zIndex: "10",
-      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)",
+      delay: 1
     }, 'orange2')
 
 
     tl2.from("#cocacola",{
       left: "-30%",
-      rotate:"-90deg"
+      rotate:"-90deg",
+      delay: 1
     }, 'orange2')
     tl2.from(".lemon1",{
       left: "-30%",
     }, 'orange2')
     tl2.from("#pepsi",{
       left: "130%",
-      rotate:"90deg"
+      rotate:"90deg",
+      delay: 1
     }, 'orange2')
     tl2.from(".lemon2",{
       left: "130%",
+      delay: 1
     }, 'orange2')
   }
 }
