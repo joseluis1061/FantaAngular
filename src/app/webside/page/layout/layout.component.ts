@@ -28,10 +28,10 @@ export class LayoutComponent implements OnInit{
     })
 
      tl.to('#fanta',{
-       top: "120%",
-       left: "0%",
-       width: "40%",
-       ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      top: "120%",
+      left: "0%",
+      width: "40%",
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
      }, 'orange')
      tl.to("#orange-cut",{
        top: "160%",
@@ -111,7 +111,6 @@ export class LayoutComponent implements OnInit{
       ease: "cubic-bezier(0.19, 1, 0.22, 1)",
       delay: 1
     }, 'orange2')
-
 
     tl2.from("#cocacola",{
       left: "-30%",
