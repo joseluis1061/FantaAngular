@@ -55,11 +55,8 @@ export class VideoSizeComponent implements OnInit {
       threshold: 0.4
     };
     if (isPlatformBrowser(this.platformId)) {
-      //console.log("Browser render **")
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          //console.log(entry.isIntersecting);
-
             if (entry.isIntersecting) {
               this.playVideo();
               // observer.unobserve(entry.target);

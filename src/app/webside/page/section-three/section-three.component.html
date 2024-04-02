@@ -3,16 +3,19 @@
     <img class="lemon lemon1" src="../../../../assets/image/lemon.webp" alt="lemon" />
     <img id="cocacola" src="../../../../assets/image/cocacola.png" alt="cocacola" />
     <h1>CocaCola</h1>
+    <p>${{2}}</p>
     <button type="button" (click)="addProduct({id:'1', name: 'cocacola', image: '/assets/image/cocacola.png', price:2})">Buy Now</button>
   </div>
   <div class="card">
     <h1>Fanta</h1>
+    <p>${{2.50}}</p>
     <button type="button" (click)="addProduct({id:'2', name: 'fanta', image: '/assets/image/fanta.png', price:2.50})">Buy Now</button>
   </div>
   <div class="card">
-    <img class="lemon lemon2" src="../../../../assets/image/lemon.webp" alt="pepsi"/>
-    <img id="pepsi" src="../../../../assets/image/pepsi.png" alt="" />
+    <img class="lemon lemon2" src="../../../../assets/image/lemon.webp" alt="lemon"/>
+    <img id="pepsi" src="../../../../assets/image/pepsi.png" alt="pepsi" />
     <h1>Pepsi</h1>
+    <p>${{1.5}}</p>
     <button type="button" (click)="addProduct({id:'3', name: 'pepsi', image: '/assets/image/pepsi.png', price:1.5})">Buy Now</button>
   </div>
 </section>

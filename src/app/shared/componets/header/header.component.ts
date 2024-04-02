@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit, OnDestroy{
       .subscribe(data => {
         this.products = data;
         this.countProduct = this.products.length;
-        console.log("Productos: ", this.products)
       })
   }
 

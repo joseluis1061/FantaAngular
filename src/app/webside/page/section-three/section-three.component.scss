@@ -26,6 +26,9 @@
   font-size: 3vw;
   z-index: 15;
 }
+.card p{
+  font-size: 1.6em;
+}
 .card button{
   font-size: 1vw;
   border-radius: 50px;
@@ -33,6 +36,11 @@
   color: #fff;
   background-color: rgb(255, 149, 0);
   padding: 1vw 2vw;
+  transition: all 0.5s ease-in-out;
+}
+.card button:hover{
+  transform: scale(1.2);
+  background-color: rgb(255, 108, 0);
 }
 #cocacola{
   top: -15%;
