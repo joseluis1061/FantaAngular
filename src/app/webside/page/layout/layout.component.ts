@@ -21,7 +21,7 @@ export class LayoutComponent implements OnInit{
         trigger: ".two",
         start: "0% 95%",
         end: "50% 50%",
-        scrub: true,
+        scrub: 3,
         toggleActions: "restart pause reverse pause",
         markers: false
       }
@@ -31,7 +31,7 @@ export class LayoutComponent implements OnInit{
       top: "120%",
       left: "0%",
       width: "40%",
-      ease: "cubic-bezier(0.19, 1, 0.22, 1)"
+      ease: "cubic-bezier(0.19, 1, 0.22, 1)",
      }, 'orange')
      tl.to("#orange-cut",{
        top: "160%",
@@ -66,7 +66,7 @@ export class LayoutComponent implements OnInit{
         trigger: ".three",
         start: "25% 95%",
         end: "50% 50%",
-        scrub: true,
+        scrub: 3,
         markers: false,
         toggleActions: "restart pause reverse pause",
 

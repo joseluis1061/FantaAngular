@@ -6,11 +6,11 @@ import { FooterComponent } from './componets/footer/footer.component';
 
 @NgModule({
   declarations: [
-    FooterComponent
   ],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    FooterComponent
   ]
 })
 export class SharedModule { }

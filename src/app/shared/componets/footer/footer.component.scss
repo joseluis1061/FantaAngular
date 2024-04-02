@@ -20,16 +20,12 @@
           width: 100%;
         }
       }
-      button{
+      p{
         color: white;
-        padding: 10px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-size: 1.5rem;
-        border: 1px solid white;
-        background-color: black;
-        border-radius: 25px 25px;
         gap: 10px;
       }
     }
@@ -102,7 +98,7 @@
     }
 
     .leyend{
-      text-align: right;
+      text-align: center;
       padding: 2rem 0;
     }
 
