@@ -42,4 +42,16 @@
       font-size: 1.5rem;
     }
   }
+
+}
+.cart{
+  z-index: 10;
+  &__td--img{
+    width: 50px;
+    height: 50px;
+    img{
+      object-fit: cover;
+      width: 100%;
+    }
+  }
 }

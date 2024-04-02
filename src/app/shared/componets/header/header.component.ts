@@ -5,10 +5,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProductsService } from '../../services/products.service';
 import { Subscription } from 'rxjs';
 import { Product } from '../../models/product.model';
+import { OverlayModule } from '@angular/cdk/overlay';
+
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatIconModule, RouterModule],
+  imports: [CommonModule, MatIconModule, RouterModule, OverlayModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -18,6 +20,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
   products: Product[] = [];
   countProducts: number = 0;
   private subs$ !: Subscription;
+  isOpen = false;
 
   constructor (
     @Inject(DOCUMENT) private document: Document,
@@ -28,6 +31,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
       .subscribe(data => {
         this.products = data;
         this.countProduct = this.products.length;
+        console.log("Productos: ", this.products)
       })
   }
 
@@ -52,6 +56,12 @@ export class HeaderComponent implements OnInit, OnDestroy{
     this.toggleMenu();
   }
 
+  decrementQuantity(id: string){
+    console.log("ID: ", id)
+  }
+  incrementQuantity(id: string){
+    console.log("ID: ", id)
+  }
   ngOnDestroy(): void {
     this.subs$.unsubscribe()
   }

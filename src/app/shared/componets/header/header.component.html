@@ -9,6 +9,58 @@
       <a (click)="goto('our')">Contact</a>
     </div>
     <!-- <i class="ri-menu-fill"></i> -->
-    <i class="header__i"><span class="header__span">{{countProduct}}</span><mat-icon>add_shopping_cart</mat-icon></i>
+    <i class="header__i"
+      (click)="isOpen = !isOpen"
+      type="button"
+      cdkOverlayOrigin
+      #cartOverlay="cdkOverlayOrigin"
+    >
+      <span class="header__span">{{countProduct}}</span>
+      <mat-icon>add_shopping_cart</mat-icon>
+    </i>
   </nav>
 </header>
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="cartOverlay"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+  <div class="header__cart cart">
+    <table className="cart__table">
+      <thead class="cart__thead">
+        <tr class="cart__tr">
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="cart__body">
+        <tr *ngFor="let product of products" class="cart__tr">
+          <td class="cart__td cart__td--img">
+            <img [src]="product.image" [alt]="product.name">
+          </td>
+          <td class="cart__td">
+            {{product.name}}
+          </td>
+          <td class="cart__td">
+            {{product.price}}
+          </td>
+          <td class="cart__td">
+            <button type="button" (click)="decrementQuantity(product.id)">
+              -
+            </button>
+            {{product.quantity}}
+            <button type="button" (click)="incrementQuantity(product.id)">
+              +
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</ng-template>

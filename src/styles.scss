@@ -5,8 +5,8 @@
 @font-face {
   font-family: Product Sans Bold;
   src: url('./assets/fonts/Product Sans Bold.ttf');
-
 }
+@import '@angular/cdk/overlay-prebuilt.css';
 
 *,
 *::before,
