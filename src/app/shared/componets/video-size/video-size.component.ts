@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./video-size.component.scss'],
 })
 export class VideoSizeComponent implements OnInit {
-  @Input() inf: any | "";
+  @Input() video: any | "";
   public flipped = true;
 
   VideoElement: any = null;

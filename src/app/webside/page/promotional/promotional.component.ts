@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class PromotionalComponent {
 
+  video = {
+    id: 'promotional',
+    Url1: '../../../../assets/videos/fantaMix.mp4'
+  }
+
 }
