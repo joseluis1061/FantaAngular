@@ -85,6 +85,7 @@ export class LayoutComponent implements OnInit{
       left: "40%",
       width:"20%",
       ease: "cubic-bezier(0.19, 1, 0.22, 1)",
+      rotate: "360deg",
       delay: 1
     }, 'orange2')
 
@@ -115,19 +116,20 @@ export class LayoutComponent implements OnInit{
     tl2.from("#cocacola",{
       left: "-30%",
       rotate:"-90deg",
-      delay: 1
     }, 'orange2')
     tl2.from(".lemon1",{
       left: "-30%",
+      rotate: "360deg",
+      delay: 1,
     }, 'orange2')
     tl2.from("#pepsi",{
       left: "130%",
       rotate:"90deg",
-      delay: 1
     }, 'orange2')
     tl2.from(".lemon2",{
       left: "130%",
-      delay: 1
+      delay: 1,
+      rotate: "360deg",
     }, 'orange2')
   }
 }
