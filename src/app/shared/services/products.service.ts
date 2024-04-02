@@ -9,6 +9,9 @@ export class ProductsService {
   private myShoppingCart: Product[] = [];
   cart = new BehaviorSubject<Product[]>([]);
   cart$ = this.cart.asObservable();
+  private total: number = 0;
+  totalSubject = new BehaviorSubject<number>(0);
+  totalSubject$ = this.totalSubject.asObservable();
 
   constructor() { }
 
@@ -25,6 +28,7 @@ export class ProductsService {
       this.myShoppingCart[existProduct].quantity = quantity;
     }
     this.cart.next(this.myShoppingCart);
+    this.totalPrice()
   }
 
   incrementProductCart(productId: string){
@@ -40,6 +44,7 @@ export class ProductsService {
 
     this.myShoppingCart = productSelect;
     this.cart.next(this.myShoppingCart);
+    this.totalPrice()
   }
 
   decrementProductCart(productId: string){
@@ -55,6 +60,12 @@ export class ProductsService {
 
     this.myShoppingCart = productSelect;
     this.cart.next(this.myShoppingCart);
+    this.totalPrice()
+  }
+
+  totalPrice(){
+    this.total = this.myShoppingCart.reduce((priceTotal, currentPrice) => priceTotal + (currentPrice.price), 0);
+    this.totalSubject.next(this.total);
   }
 
   remuveAll(){

@@ -60,6 +60,7 @@
         </tr>
       </tbody>
     </table>
+    <p *ngIf="totalPrice > 0">Total: ${{totalPrice}}</p>
     <button class="cart__button cart__button--black" type="button" (click)="removeAllProducts()">
       <p>Delete all</p>
     </button>

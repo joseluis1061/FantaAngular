@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
   countProduct = 0;
   products: Product[] = [];
   countProducts: number = 0;
+  totalPrice: number = 0;
   private subs$ !: Subscription;
   isOpen = false;
 
@@ -32,6 +33,11 @@ export class HeaderComponent implements OnInit, OnDestroy{
         this.products = data;
         this.countProduct = this.products.length;
       })
+
+      this.productsService.totalSubject$
+        .subscribe(data => {
+          this.totalPrice = data
+        })
   }
 
   toggleMenu(){
