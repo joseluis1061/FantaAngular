@@ -1,7 +1,7 @@
 <header class="header">
-  <nav>
-    <a (click)="goto('one')" class="logo"><img src="../../../assets/image/coca-cola-logo.png" alt="Logo" loading="lazy"></a>
-    <div class="cntr-nav">
+  <nav class="header__nav nav">
+    <a (click)="goto('one')" class="nav__a--logo logo"><img src="../../../assets/image/coca-cola-logo.png" alt="Logo" loading="lazy"></a>
+    <div class="cntr-nav nav--controls">
       <a (click)="goto('promotional')">Promotional</a>
       <a (click)="goto('one')">Home</a>
       <a (click)="goto('two')">Products</a>
@@ -9,6 +9,6 @@
       <a (click)="goto('our')">Contact</a>
     </div>
     <!-- <i class="ri-menu-fill"></i> -->
-    <i><mat-icon>add_shopping_cart</mat-icon></i>
+    <i class="header__i"><span class="header__span">{{countProduct}}</span><mat-icon>add_shopping_cart</mat-icon></i>
   </nav>
 </header>

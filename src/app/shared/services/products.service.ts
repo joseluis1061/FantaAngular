@@ -15,7 +15,7 @@ export class ProductsService {
   get getCart(){
     return this.cart;
   }
-  set setCart(product: Product){
+  addProductCart(product: Product){
     this.myShoppingCart.push(product)
     this.cart.next(this.myShoppingCart);
   }

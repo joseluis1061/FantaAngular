@@ -33,4 +33,13 @@
     font-size: 2vw;
     color: white;
   }
+  &__i{
+    position: relative;
+    .header__span{
+      position: absolute;
+      top: -10px;
+      left: -15px;
+      font-size: 1.5rem;
+    }
+  }
 }

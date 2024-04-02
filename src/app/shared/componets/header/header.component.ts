@@ -1,7 +1,7 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { ProductsService } from '../../services/products.service';
 import { Subscription } from 'rxjs';
 import { Product } from '../../models/product.model';
@@ -26,7 +26,8 @@ export class HeaderComponent implements OnInit, OnDestroy{
   ngOnInit(): void{
     this.productsService.cart$
       .subscribe(data => {
-        console.log("Header data", data);
+        this.products = data;
+        this.countProduct = this.products.length;
       })
   }
 
