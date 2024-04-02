@@ -21,7 +21,7 @@
 }
 #orange-cut{
   position: absolute;
-  top: 10%;
+  top: 110%;
   left: 32%;
   width: 15%;
   z-index: 1;
@@ -31,12 +31,12 @@
   position: absolute;
   width: 10%;
   z-index: 3;
-  top: 55%;
+  top: 155%;
   right: 30%;
   /* transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s; */
 }
 #leaf{
-  top: 10%;
+  top: 110%;
   left: 0%;
   transform: rotate(60deg);
   position: absolute;
@@ -45,7 +45,7 @@
   /* transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s; */
 }
 #leaf2{
-  top: 70%;
+  top: 170%;
   left: 80%;
   transform: rotate(-90deg);
   position: absolute;
@@ -56,6 +56,6 @@
 #leaf3{
   position: absolute;
   width: 20%;
-  top: 10%;
+  top: 110%;
   right: 0%;
 }

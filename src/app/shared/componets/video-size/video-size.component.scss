@@ -1,0 +1,11 @@
+.box-video{
+  display: block;
+  height: 100%;
+  width: 100%;
+  video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    //border-radius: 40px;
+  }
+}

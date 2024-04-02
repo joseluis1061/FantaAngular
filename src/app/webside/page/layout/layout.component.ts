@@ -19,7 +19,7 @@ export class LayoutComponent implements OnInit{
       scrollTrigger:{
         scroller: '.layout',
         trigger: ".two",
-        start: "0% 95%",
+        start: "100% 195%",
         end: "50% 50%",
         scrub: 3,
         toggleActions: "restart pause reverse pause",
@@ -28,30 +28,30 @@ export class LayoutComponent implements OnInit{
     })
 
      tl.to('#fanta',{
-      top: "120%",
+      top: "220%",
       left: "0%",
       width: "40%",
       ease: "cubic-bezier(0.19, 1, 0.22, 1)",
      }, 'orange')
      tl.to("#orange-cut",{
-       top: "160%",
+       top: "260%",
        left: "23%",
        ease: "cubic-bezier(0.19, 1, 0.22, 1)"
      }, 'orange')
      tl.to("#orange",{
-       top: "170%",
+       top: "270%",
        right: "10%",
        width: "15%",
        ease: "cubic-bezier(0.19, 1, 0.22, 1)"
      }, 'orange')
      tl.to("#leaf",{
-       top: "110%",
+       top: "210%",
        left: "80%",
        rotate: "130deg",
        ease: "cubic-bezier(0.19, 1, 0.22, 1)"
      }, 'orange')
      tl.to("#leaf2",{
-       top: "150%",
+       top: "250%",
        left: "0%",
        rotate: "130deg",
        ease: "cubic-bezier(0.19, 1, 0.22, 1)"
@@ -64,7 +64,7 @@ export class LayoutComponent implements OnInit{
       scrollTrigger:{
         scroller: '.layout',
         trigger: ".three",
-        start: "25% 95%",
+        start: "125% 195%",
         end: "50% 50%",
         scrub: 3,
         markers: false,
@@ -74,14 +74,14 @@ export class LayoutComponent implements OnInit{
     })
 
     tl2.to("#fanta",{
-      top: "215%",
+      top: "315%",
       left: "32%",
       width: "35%",
       ease: "cubic-bezier(0.19, 1, 0.22, 1)",
       delay: 1
     }, 'orange2')
     tl2.to("#orange-cut",{
-      top: "210%",
+      top: "310%",
       left: "40%",
       width:"20%",
       ease: "cubic-bezier(0.19, 1, 0.22, 1)",
@@ -90,14 +90,14 @@ export class LayoutComponent implements OnInit{
     }, 'orange2')
 
     tl2.to("#orange",{
-      top: "250%",
+      top: "350%",
       right: "30%",
       width: "15%",
       ease: "cubic-bezier(0.19, 1, 0.22, 1)",
       delay: 1
     }, 'orange2')
     tl2.to("#leaf",{
-      top: "225%",
+      top: "325%",
       left: "0%",
       rotate: "160deg",
       zIndex: "10",
@@ -105,7 +105,7 @@ export class LayoutComponent implements OnInit{
       delay: 1
     }, 'orange2')
     tl2.to("#leaf2",{
-      top: "230%",
+      top: "330%",
       left: "90%",
       rotate: "160deg",
       zIndex: "10",

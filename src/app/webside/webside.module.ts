@@ -8,6 +8,8 @@ import { SectionThreeComponent } from './page/section-three/section-three.compon
 import { LayoutComponent } from './page/layout/layout.component';
 import { HeaderComponent } from '../shared/componets/header/header.component';
 import { FooterComponent } from '../shared/componets/footer/footer.component';
+import { PromotionalComponent } from './page/promotional/promotional.component';
+import { VideoSizeComponent } from '../shared/componets/video-size/video-size.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { FooterComponent } from '../shared/componets/footer/footer.component';
     SectionTwoComponent,
     SectionThreeComponent,
     LayoutComponent,
+    PromotionalComponent,
   ],
   imports: [
     CommonModule,
     WebsideRoutingModule,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    VideoSizeComponent
   ]
 })
 export class WebsideModule { }
