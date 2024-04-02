@@ -1,7 +1,10 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
+import { ProductsService } from '../../services/products.service';
+import { Subscription } from 'rxjs';
+import { Product } from '../../models/product.model';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -9,13 +12,22 @@ import {MatIconModule} from '@angular/material/icon';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy{
   activeMenu = false;
   countProduct = 0;
+  products: Product[] = [];
+  countProducts: number = 0;
+  private subs$ !: Subscription;
 
-  constructor (@Inject(DOCUMENT) private document: Document) {}
+  constructor (
+    @Inject(DOCUMENT) private document: Document,
+    private productsService: ProductsService
+  ) {}
   ngOnInit(): void{
-
+    this.productsService.cart$
+      .subscribe(data => {
+        console.log("Header data", data);
+      })
   }
 
   toggleMenu(){
@@ -37,5 +49,9 @@ export class HeaderComponent {
         inline: "nearest"
     });
     this.toggleMenu();
+  }
+
+  ngOnDestroy(): void {
+    this.subs$.unsubscribe()
   }
 }
