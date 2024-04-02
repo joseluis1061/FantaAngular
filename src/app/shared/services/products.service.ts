@@ -43,8 +43,8 @@ export class ProductsService {
     })
 
     this.myShoppingCart = productSelect;
-    this.cart.next(this.myShoppingCart);
     this.totalPrice()
+    this.cart.next(this.myShoppingCart);
   }
 
   decrementProductCart(productId: string){
@@ -59,8 +59,8 @@ export class ProductsService {
     })
 
     this.myShoppingCart = productSelect;
-    this.cart.next(this.myShoppingCart);
     this.totalPrice()
+    this.cart.next(this.myShoppingCart);
   }
 
   totalPrice(){
@@ -71,5 +71,6 @@ export class ProductsService {
   remuveAll(){
     this.myShoppingCart = [];
     this.cart.next(this.myShoppingCart);
+    this.totalPrice()
   }
 }
