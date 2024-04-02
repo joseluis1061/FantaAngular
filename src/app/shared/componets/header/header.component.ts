@@ -57,10 +57,13 @@ export class HeaderComponent implements OnInit, OnDestroy{
   }
 
   decrementQuantity(id: string){
-    console.log("ID: ", id)
+    this.productsService.decrementProductCart(id);
   }
   incrementQuantity(id: string){
-    console.log("ID: ", id)
+    this.productsService.incrementProductCart(id);
+  }
+  removeAllProducts(){
+    this.productsService.remuveAll();
   }
   ngOnDestroy(): void {
     this.subs$.unsubscribe()

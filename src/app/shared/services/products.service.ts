@@ -16,7 +16,49 @@ export class ProductsService {
     return this.cart;
   }
   addProductCart(product: Product){
-    this.myShoppingCart.push(product)
+    const existProduct = this.myShoppingCart.findIndex(item => item.id === product.id);
+    if(existProduct === -1){
+      product.quantity = 1;
+      this.myShoppingCart.push(product)
+    }else{
+      const quantity = (this.myShoppingCart[existProduct]?.quantity ?? 0) + 1;
+      this.myShoppingCart[existProduct].quantity = quantity;
+    }
+    this.cart.next(this.myShoppingCart);
+  }
+
+  incrementProductCart(productId: string){
+    const productSelect = this.myShoppingCart.map(item => {
+      if(item.id === productId){
+        return {
+          ...item,
+          quantity: (item?.quantity?? 0) + 1
+        }
+      }
+      return item
+    })
+
+    this.myShoppingCart = productSelect;
+    this.cart.next(this.myShoppingCart);
+  }
+
+  decrementProductCart(productId: string){
+    const productSelect = this.myShoppingCart.map(item => {
+      if(item.id === productId && item.quantity !== 1){
+        return {
+          ...item,
+          quantity: (item?.quantity?? 0) - 1
+        }
+      }
+      return item
+    })
+
+    this.myShoppingCart = productSelect;
+    this.cart.next(this.myShoppingCart);
+  }
+
+  remuveAll(){
+    this.myShoppingCart = [];
     this.cart.next(this.myShoppingCart);
   }
 }

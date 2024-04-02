@@ -28,38 +28,41 @@
   <div class="header__cart cart">
     <table className="cart__table">
       <thead class="cart__thead">
-        <tr class="cart__tr">
-          <th>Imagen</th>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-          <th></th>
+        <tr class="cart__tr cart__tr--head">
+          <th class="cart__th">Imagen</th>
+          <th class="cart__th">Nombre</th>
+          <th class="cart__th">Precio</th>
+          <th class="cart__th">Cantidad</th>
+          <th class="cart__th"></th>
         </tr>
       </thead>
       <tbody class="cart__body">
-        <tr *ngFor="let product of products" class="cart__tr">
+        <tr *ngFor="let product of products" class="cart__tr cart__tr--body">
           <td class="cart__td cart__td--img">
             <img [src]="product.image" [alt]="product.name">
           </td>
           <td class="cart__td">
-            {{product.name}}
+            {{product.name | uppercase}}
           </td>
           <td class="cart__td">
             {{product.price}}
           </td>
-          <td class="cart__td">
-            <button type="button" (click)="decrementQuantity(product.id)">
-              -
+          <td class="cart__td cart__td--quantity">
+            <button class="cart__button cart__button--add" type="button" (click)="decrementQuantity(product.id)">
+              <p>-</p>
             </button>
             {{product.quantity}}
-            <button type="button" (click)="incrementQuantity(product.id)">
-              +
+            <button class="cart__button cart__button--add" type="button" (click)="incrementQuantity(product.id)">
+              <p>+</p>
             </button>
           </td>
 
         </tr>
       </tbody>
     </table>
+    <button class="cart__button cart__button--black" type="button" (click)="removeAllProducts()">
+      <p>Delete all</p>
+    </button>
 
   </div>
 
